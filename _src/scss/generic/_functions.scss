@@ -12,8 +12,7 @@
 $root-size-em: ($root-size / 16px) * 1em;
 
 // Calculate the offset required to correctly align the baseline guide
-$baseline-distance: (($root-lineheight - $font-root-capheight) / $root-lineheight) + em;
-//$baseline-distance: ($root-size-em * ($root-lineheight - $font-root-capheight) / $root-lineheight);
+$baseline-distance: $root-size-em * ($root-lineheight - ($font-root-capheight * .5)) * .5;
 
 // Returns a context-dependant em value for vertically spacing elements, where a
 // value of 4 is equal to our vertical baseline height.

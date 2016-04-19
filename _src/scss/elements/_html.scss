@@ -27,9 +27,7 @@ html {
       pointer-events: none;
       position: absolute;
 
-      margin-top: - $baseline-distance;
-
-      top: 0;
+      top: - $baseline-distance;
       right: 0;
       bottom: 0;
       left: 0;
@@ -51,11 +49,9 @@ html {
     box-sizing: inherit;
   }
 
+  // The Lobotomised Owl selector from @heydonworks, as described in:
+  // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
   + * {
-
-    &:not(li) {
-      // Set the default vertical rhythym on all elements
-      margin-top: spacer();
-    }
+    margin-top: spacer();
   }
 }
