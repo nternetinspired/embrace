@@ -21,7 +21,8 @@
   @extend %list--unstyled;
 
   li {
-//    padding: spacer(2) 0;
+
+    margin: spacer(2) 0;
 
     &:before {
       content: '\002714';
@@ -35,6 +36,7 @@
   @extend %list--unstyled;
 
   li {
+    margin: 0;
     padding: spacer(2) 0;
 
     &:not(:last-child) {
