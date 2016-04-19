@@ -1,0 +1,22 @@
+---
+layout: default
+layout-class: category
+---
+
+<section class="container">
+
+    {% if page.title %}
+    <header>
+
+        <h1>{{ page.title | titlecase }}</h1>
+
+        {% if page.description %}
+        <p class="lede">{{ page.description | widont }}</p>
+        {% endif %}
+
+    </header>
+    {% endif %}
+
+    {{ content }}
+
+</section>

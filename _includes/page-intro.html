@@ -1,0 +1,14 @@
+
+<article id="{{ post.title | downcase | replace:' ','-' | replace:',','' | strip_html }}" itemscope itemtype="http://schema.org/Article">
+
+    <header>
+        <h1 class="article-header h2" itemprop="name headline">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | titlecase }}</a>
+        </h1>
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+        {{ post.content }}
+    </div>
+
+</article>

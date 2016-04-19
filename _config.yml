@@ -1,0 +1,44 @@
+# Site settings
+title              : Embrace • A sharper CSS framework
+company            : Embrace
+description        : A SCSS micro-framework for developing performant sites with stunning typography.
+disclaimer         : • Made in the UK • HD-Ready&trade; and 4K Proof&reg;.
+url                : https://nternetinspired.github.io/embrace # the base hostname & protocol for your site
+locale             : en_UK
+
+# Site owner
+owner              :
+  name             : Seth Warburton
+  email            : embrace@internet-inspired.com
+  twitter_username : EmbraceCSS
+  github_username  : nternetinspired
+  github_repo      : embrace
+  dribbble_username:
+
+# Build settings
+baseurl            : '/embrace'
+permalink          : /:categories/:title/
+compress_html      :
+  clippings        : all
+
+# Plugins
+whitelist          : []
+gems               :
+  - jekyll-typogrify
+  - jekyll-paginate
+
+# Handling Reading
+safe               : true
+include            : [".htaccess"]
+exclude            : ["node_modules/",".sass-cache/","Gemfile","Gemfile.lock",".git/",".Gruntfile.js","package.json"]
+
+# Set front-matter defaults to save us some typing
+defaults           :
+  -
+    scope          :
+      path         : ""
+      type         : "posts"
+    values         :
+      layout       : "page"
+      comments     : "no"
+      dates        : "no"

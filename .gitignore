@@ -1,9 +1,9 @@
 
 # Ignore Jekyll stuff
-_config.yml
-_includes
-_layouts
-_posts
+#_config.yml
+#_includes
+#_layouts
+#_posts
 _site
 .jekyll-metadata
 
@@ -16,20 +16,20 @@ scss-lint-report.xml
 .sass-cache
 
 # Ignore compiled shit
-css/
-js/
-img/
+#css/
+#js/
+#img/
 
 # Ignore placeholder content
-_src/img
-_src/js
+#_src/img
+#_src/js
 
 # Ignore documentation
-elements.md
-index.md
-mixins.md
-patterns.md
-utilities.md
+#elements.md
+#index.md
+#mixins.md
+#patterns.md
+#utilities.md
 
 # Ignore OS stuff
 .DS_Store
