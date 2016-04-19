@@ -27,9 +27,7 @@ html {
       pointer-events: none;
       position: absolute;
 
-      margin-top: - $baseline-distance;
-
-      top: 0;
+      top: - $baseline-distance;
       right: 0;
       bottom: 0;
       left: 0;
