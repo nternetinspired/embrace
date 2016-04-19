@@ -1,0 +1,20 @@
+
+/* ==========================================================================
+    BODY
+   ========================================================================== */
+
+body {
+  color: $color-root;
+  font: $weight-root #{$root-size-em}/#{$root-lineheight} $font-root;
+  margin: 0;
+
+  @if $opentype == true {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-root-background;
+  text-shadow: none;
+}

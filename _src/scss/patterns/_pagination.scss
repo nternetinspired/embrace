@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+    PAGINATION
+   ========================================================================== */
+
+.pagination {
+  @extend %nav;
+  line-height: initial;
+  text-align: center;
+
+  li {
+    border: 1px solid $color-border;
+  }
+
+  span {
+    display: block;
+    padding: spacer(2);
+  }
+}

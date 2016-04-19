@@ -1,0 +1,26 @@
+
+/* ==========================================================================
+    INPUT GROUPS
+   ========================================================================== */
+
+.input-group {
+  display: flex;
+  width: 100%;
+
+  .form-control {
+    border-radius: $radius-input 0 0 $radius-input;
+    margin-right: -1px;
+  }
+}
+
+.input-group-btn {
+  white-space: nowrap;
+
+  &:first-child {
+    border-radius: 0 0 $radius-button $radius-button;
+  }
+
+  &:last-child {
+    border-radius: 0 $radius-button $radius-button 0;
+  }
+}

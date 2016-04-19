@@ -1,0 +1,21 @@
+
+/* ==========================================================================
+    FLUID TYPE
+   ========================================================================== */
+
+html {
+
+  font-size: 87.5%; // 15px if the root is 16px
+
+  @include mq($min, $md) {
+    font-size: 100%;
+  }
+
+  @include mq($min, $lg) {
+    font-size: 112.5%; // 18px if the root was 16px
+  }
+
+  @include mq($min, $xl) {
+    font-size: 125%; // 20px if the root was 16px
+  }
+}

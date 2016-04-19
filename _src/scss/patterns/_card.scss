@@ -1,0 +1,23 @@
+
+/* ==========================================================================
+    CARD
+   ========================================================================== */
+
+.card {
+  @include border();
+  @include box-shadow();
+  background: $color-root-background;
+
+  &-content {
+    @extend %margin-off;
+    padding: spacer(4);
+  }
+
+  &-header {
+    @extend %margin-off;
+  }
+
+  &-img {
+    border-bottom: 1px solid $color-border;
+  }
+}

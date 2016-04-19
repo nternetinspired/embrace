@@ -1,0 +1,202 @@
+
+// ==========================================================================
+//  MIXINS
+// ==========================================================================
+
+// Better (?) OSX font-rendering
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Clearfix Reloaded http://cssmojo.com/the-very-latest-clearfix-reloaded/
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+// @include triangle within a pseudo element and add positioning properties
+// (ie. top, left) $direction: up, down, left, right
+@mixin triangle($direction, $size: $root-size-em, $color: $color-background) {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+
+  @if ($direction == 'up') {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  } @else if ($direction == 'down') {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  } @else if ($direction == 'left') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == 'right') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+}
+
+// Font-face syntax, the easy way
+@mixin font-face($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.eot'); // IE9 compat
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+    url('#{$src}.woff') format('woff'), // standards
+    url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+    url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+// Vertically and horizontally center something of unknown size inside and parent of unknown size.
+@mixin center {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+// Basic transitions.
+@mixin transition($transition: all .3s ease) {
+  transition: $transition;
+}
+
+// Better box-shadows.
+@mixin box-shadow($shadow1: 0 2px 5px 0 rgba(0, 0, 0, .075), $shadow2: 0 2px 10px 0 rgba(0, 0, 0, .05), $shadow3: false) {
+  $shadows: $shadow1;
+
+  @if $shadow2 {
+    $shadows: $shadow1, $shadow2;
+  }
+
+  @if $shadow3 {
+    $shadows: $shadow1, $shadow2, $shadow3;
+  }
+
+  box-shadow: $shadows;
+}
+
+// Border with perspective
+@mixin border($border-top: rgba(0, 0, 0, .1), $border-sides: rgba(0, 0, 0, .15), $border-bottom: rgba(0, 0, 0, .2)) {
+  border: 1px solid;
+  border-color: $border-top $border-sides $border-bottom;
+}
+
+// Basic vertical gradients.
+@mixin vertical($start-color: $color-root-background, $end-color: darken($color-root-background, 10%)) {
+  background-color: $end-color;
+  background-image: linear-gradient($start-color, $end-color);
+  background-repeat: repeat-x;
+}
+
+// =============================================================================
+// Dependency-free breakpoint mixin
+// - http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/
+// =============================================================================
+$min: min-width;
+$max: max-width;
+
+@mixin mq($constraint, $viewport1, $viewport2:null) {
+  @if $constraint == $min {
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == $max {
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+// ==========================================================================
+//  TYPE SETTING VODOO
+// ==========================================================================
+//
+// The simplest method is to just pass the font-size and then get an automagically
+// calculated lineheight and bottom margin to keep the element on the baseline.
+// e.g.
+//
+// .foo {@include font-size($scale-up1);}
+//
+// compiles to:
+//
+// .foo {
+//    font-size: 1.333em;
+//    line-height: 1.5003750938;
+//    margin-bottom: 1.5003750938em
+// }
+//
+// Alternatively, you can pass a value for the top margin to the spacer
+// function;
+//
+// .foo {@include font-size($scale-up1, 2);}
+//
+// compiles to:
+//
+// .foo {
+//    font-size: 1.333em;
+//    line-height: 1.5003750938;
+//    margin-bottom: .7501875469em; // half the default value
+// }
+//
+// or omit the margin completely;
+// .foo {@include font-size($scale-up1, null);}
+//
+// compiles to:
+//
+// .foo {
+//    font-size: 1.333em;
+//    line-height: 1.5003750938;
+// }
+//
+// Line-height can be specified explicitly, as an integer or valid line-height
+// value, e.g.;
+//
+// .foo {@include font-size($scale-up1, null, normal);}
+//
+// compiles to:
+//
+// .foo {
+//    font-size: 1.333em;
+//    line-height: normal;
+// }
+//
+
+@mixin font-size($font-size: $root-size-em, $spacer: 4, $lineheight: auto) {
+
+  // If you don't pass a lineheight param, auto-calculate it.
+  @if $lineheight == auto {
+    $lineheight: ceil($font-size / $root-lineheight) * ($root-lineheight / $font-size);
+    line-height: $lineheight;
+  }
+
+  // If you pass an integer, or valid line-height setting we'll use that instead.
+  @if (type-of($lineheight) == number or $lineheight == inherit or $lineheight == initial or $lineheight == normal) {
+    line-height: $lineheight;
+  }
+
+  // Use the margin spacer value, if it's an integer.
+  @if (type-of($spacer) == number) {
+    margin-top: spacer($spacer, $font-size);
+  }
+
+  font-size: $font-size;
+}

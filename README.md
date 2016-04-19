@@ -1,2 +1,5 @@
-# embrace
-A Sass micro-framework that aims to take the path of least resistance. 
+# Embrace
+
+A SCSS micro-framework for developing performant sites with stunning typography.
+
+It is designed for performance, accessibility and utility.

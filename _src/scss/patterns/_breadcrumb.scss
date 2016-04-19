@@ -1,0 +1,21 @@
+
+/* ==========================================================================
+    BREADCRUMBS
+   ========================================================================== */
+
+.breadcrumb {
+
+  @extend %list--inline;
+
+  li {
+    &::after {
+      content: '\00BB' '\00A0'; // Chevron style
+      //    content: '\002F' '\00A0'; // Path style
+      margin-left: .5em;
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}

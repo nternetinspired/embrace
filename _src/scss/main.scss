@@ -1,0 +1,139 @@
+@charset 'utf-8';
+
+/* =========================================================================
+   Name:       Embrace
+   Version:    0.0.1
+   Created:    December 2015
+   Author:     Seth Warburton - @nternetinspired
+   Copyright:  Seth Warburton - (C) 2015-2016
+   Licenses:   MIT & DBAD
+  ========================================================================== */
+
+
+/* =============================================================================
+  TEMPLATE VARIABLES
+  Import project variables first, so they're available globally.
+  Want to change something? Check here first, there's probably a variable ;)
+============================================================================= */
+@import 'variables';
+
+
+/* =============================================================================
+  GLOBAL PARTIALS
+  Mixins, helpers, functions; things that don't belong anywhere else! Ideally,
+  these generic partials won't output anything directly.
+============================================================================= */
+@import 'generic/functions';
+@import 'generic/mixins';
+
+@import 'generic/reset'; // Resets some things. Naturally.
+@import 'generic/fluid-type';
+@import 'generic/helpers';
+@import 'generic/modular-scale';
+
+
+/* =============================================================================
+  ELEMENT STYLES
+  Low-level styles applied directly to named html elements only, to keep
+  specificity low.
+============================================================================= */
+@import 'elements/html';
+@import 'elements/body';
+@import 'elements/code';
+@import 'elements/figure';
+@import 'elements/form';
+@import 'elements/headings';
+@import 'elements/image';
+@import 'elements/link';
+@import 'elements/lists';
+@import 'elements/quotes';
+@import 'elements/rule';
+@import 'elements/table';
+@import 'elements/typography';
+
+
+/* =============================================================================
+  UTILITIES
+  One-trick ponies, these are single-purpose utlility classes designed to
+  trump any conflicting style applied to an element.
+============================================================================= */
+@import 'utilities/align';
+@import 'utilities/aspect-ratio';
+@import 'utilities/border';
+@import 'utilities/float';
+@import 'utilities/margin';
+@import 'utilities/weight';
+@import 'utilities/width';
+
+
+/* =============================================================================
+  PATTERNS
+  Re-usable objects that bring recurring CSS patterns into discrete and easily
+  maintainable modules. If your pattern grows to more than 20 lines you should
+  probably consider making it a component instead.
+============================================================================= */
+@import 'patterns/alert';
+@import 'patterns/article';
+@import 'patterns/breadcrumb'; // @extends patterns/lists
+@import 'patterns/button';
+@import 'patterns/card';
+@import 'patterns/close';
+@import 'patterns/container';
+@import 'patterns/form';
+@import 'patterns/grid';// Best advice? Comment out and make your own damn grid.
+@import 'patterns/headings';
+@import 'patterns/image';
+@import 'patterns/input-group';
+@import 'patterns/lists';
+@import 'patterns/logo';
+//@import 'patterns/map';
+@import 'patterns/media';
+@import 'patterns/nav';
+@import 'patterns/overlay';
+@import 'patterns/pager';
+@import 'patterns/pagination';
+@import 'patterns/quotes';
+@import 'patterns/section';
+@import 'patterns/table';
+@import 'patterns/typography';
+
+
+/* =============================================================================
+  COMPONENT STYLES
+  Too complex to be defined as a pattern, component styles target specific
+  components without tying them to a pre-defined view or layout. A good
+  example would be a carousel or slider.
+============================================================================= */
+//@import 'components/slider';
+
+
+/* =============================================================================
+  SECTION STYLES
+  Document-level structural elements and page regions, as defined in your index
+  page. Big pieces of web page, not small pieces.
+============================================================================= */
+@import 'sections/complementary';
+@import 'sections/footer';
+@import 'sections/header';
+@import 'sections/main';
+@import 'sections/navigation';
+
+
+/* =============================================================================
+  VIEWS
+  CSS specific *only* to individual layouts (templates / views), and normally
+  applied via page class selectors, e.g. .blog {…}. If you don't need these you
+  have a very modular design.
+============================================================================= */
+@import 'layouts/category';
+@import 'layouts/homepage';
+@import 'layouts/page';
+
+
+/* =============================================================================
+  VENDOR STYLES
+  The things we didn't write, and don't want to modify, typically imports from
+  Bower and NPM installed modules, or external sources. Someone else's CSS.
+============================================================================= */
+/* Layout debugging tool */
+//@import 'https://s3-us-west-2.amazonaws.com/pesticide/1.2.0/pesticide.min.css';

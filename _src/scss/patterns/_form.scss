@@ -1,0 +1,61 @@
+
+/* ==========================================================================
+    FORMS
+   ========================================================================== */
+
+.form-control {
+
+  @include box-shadow(0 0 0 1px $color-border inset, null);
+  @include font-size($root-size-em, 2 , null);
+  @include transition(all .3s ease);
+
+  background: $color-background-input;
+  border-radius: $radius-input;
+  color: $color-root;
+
+  font-family: inherit;
+  padding: spacer(2);
+
+  width: 100%;
+
+  @if $opentype == true {
+    // Turns on lining, proportional numerals without clarified zeroes
+    font-feature-settings: 'kern' 0, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 0, 'lnum' 1, 'zero' 0;
+  }
+
+  &:focus {
+    @include box-shadow(0 0 0 1px darken($color-border, 10%) inset, 0 5px 10px 0 rgba(0, 0, 0, .05));
+    outline: none;
+    outline-width: 0;
+  }
+}
+
+.form-help {
+
+}
+
+.form-styled {
+  background: $color-background;
+  border: 1px solid $color-border;
+  max-width: $width-copy;
+  padding: spacer();
+
+  legend {
+    @extend %muted;
+    @include font-size($scale-down1, 4, initial);
+    padding-right: 1em;
+    font-weight: $weight-strong;
+    text-transform: uppercase;
+  }
+
+  fieldset {
+  //  border-top: 1px solid lighten($color-root, 5%);
+  }
+}
+
+/* Make checkboxes and radio buttons display inline. */
+.checkbox-inline,
+.radio-inline {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}

@@ -1,0 +1,60 @@
+
+/* ==========================================================================
+    TEXT ALIGNMENT
+   ========================================================================== */
+
+.align-left {
+  text-align: left;
+}
+
+@include mq($min, $sm) {
+  .sm-align-left {
+    text-align: left;
+  }
+}
+
+@include mq($min, $md) {
+  .md-align-left {
+    text-align: left;
+  }
+}
+
+@include mq($min, $lg) {
+  .lg-align-left {
+    text-align: left;
+  }
+}
+
+@include mq($min, $xl) {
+  .xl-align-left {
+    text-align: left;
+  }
+}
+
+.align-right {
+  text-align: right;
+}
+
+@include mq($min, $sm) {
+  .sm-align-right {
+    text-align: right;
+  }
+}
+
+@include mq($min, $md) {
+  .md-align-right {
+    text-align: right;
+  }
+}
+
+@include mq($min, $lg) {
+  .lg-align-right {
+    text-align: right;
+  }
+}
+
+@include mq($min, $xl) {
+  .xl-align-right {
+    text-align: right;
+  }
+}

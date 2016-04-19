@@ -1,0 +1,68 @@
+
+/* ==========================================================================
+    ALERT
+   ========================================================================== */
+
+.alert {
+  @include box-shadow(0 0 0 1px $color-border inset);
+  border-radius: $radius-brand;
+  max-width: $width-copy;
+  padding: spacer(4);
+  position: relative;
+}
+
+.alert--danger {
+  background: lighten($color-danger, 35%);
+  color: desaturate(darken($color-danger, 25%), 25%);
+
+  .alert-link {
+    color: desaturate(darken($color-danger, 25%), 25%);
+
+    &:focus,
+    &:hover {
+      color: $color-danger;
+    }
+  }
+}
+
+.alert--info {
+  background: lighten($color-info, 30%);
+  color: desaturate(darken($color-info, 25%), 25%);
+
+  .alert-link {
+    color: desaturate(darken($color-info, 25%), 25%);
+
+    &:focus,
+    &:hover {
+      color: $color-info;
+    }
+  }
+}
+
+.alert--success {
+  background: lighten($color-success, 35%);
+  color: desaturate(darken($color-success, 25%), 25%);
+
+  .alert-link {
+    color: desaturate(darken($color-success, 25%), 25%);
+
+    &:focus,
+    &:hover {
+      color: $color-success;
+    }
+  }
+}
+
+.alert--warning {
+  background: lighten($color-warning, 35%);
+  color: desaturate(darken($color-warning, 25%), 25%);
+
+  .alert-link {
+    color: desaturate(darken($color-warning, 25%), 25%);
+
+    &:focus,
+    &:hover {
+      color: $color-warning;
+    }
+  }
+}

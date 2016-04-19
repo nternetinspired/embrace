@@ -1,0 +1,13 @@
+{
+  "name": "Embrace",
+  "version": "0.0.1",
+  "author": "Seth Warburton <seth@internet-inspired.com>",
+  "description": "Embrace - A lightweight web thing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nternetinspired/embrace.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nternetinspired/embrace/issues"
+  }
+}

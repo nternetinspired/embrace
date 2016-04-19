@@ -1,0 +1,60 @@
+
+/* ==========================================================================
+    MEDIA
+   ========================================================================== */
+
+/* The media object abstraction, first proposed here:
+ *
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *
+ * The media object here takes any element with a class of .media and
+ * floats an image or anything with a .media-object class to the left
+ * and gives it a right margin.
+ *
+ * To reverse this pattern, simply add a .right class to the same element, eg:
+ * class="media right".
+ *
+ * The .media-responsive pattern simply defers the .media-object floating to the
+ * specified breakpoint.
+ */
+
+.media {
+  @extend %clearfix;
+
+  .media-object {
+    float: left;
+    margin-right: spacer(4);
+    max-width: 50%;
+  }
+
+  &.right {
+    .media-object {
+      float: right;
+      margin-left: spacer(4);
+    }
+  }
+}
+
+.media-responsive {
+  @extend %clearfix;
+
+  @include mq($min, $md) {
+    .media-object {
+      float: left;
+      margin-right: spacer(4);
+      max-width: 50%;
+    }
+
+    &.right {
+      .media-object {
+        float: right;
+        margin-left: spacer(4);
+      }
+    }
+  }
+}
+
+// Text content of media and media-responsive objects
+.media-content {
+  overflow: hidden;
+}

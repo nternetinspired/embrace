@@ -1,0 +1,38 @@
+
+/* ==========================================================================
+    LISTS
+   ========================================================================== */
+
+ul,
+ol,
+dl {
+
+}
+
+dt {
+  font-weight: $weight-strong;
+}
+
+/*
+* There's a reason it's called 'hanging punctuation'and bullets should be outdented.
+* See: http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2
+*/
+ul {
+  list-style-position: outside;
+}
+
+ol {
+
+  @if $font-root == $font-serif {
+    // Have a little class!
+    list-style-type: lower-roman;
+  }
+}
+
+li {
+
+  > ul,
+  > ol {
+    margin: 0 0 0 spacer(4); // We don't need vertical space in nested lists
+  }
+}

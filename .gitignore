@@ -1,0 +1,40 @@
+
+# Ignore Jekyll stuff
+_config.yml
+_includes
+_layouts
+_posts
+_site
+.jekyll-metadata
+
+# Ignore development environment stuff
+Gemfile
+Gemfile.lock
+Gruntfile.js
+node_modules
+scss-lint-report.xml
+.sass-cache
+
+# Ignore compiled shit
+css/
+js/
+img/
+
+# Ignore placeholder content
+_src/img
+_src/js
+
+# Ignore documentation
+elements.md
+index.md
+mixins.md
+patterns.md
+utilities.md
+
+# Ignore OS stuff
+.DS_Store
+.tmp
+.bk
+
+# Ignore sensitive stuff
+_secret.json

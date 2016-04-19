@@ -1,0 +1,71 @@
+
+/* ==========================================================================
+    HEADINGS
+    // scss-lint:disable SingleLinePerSelector
+   ========================================================================== */
+
+h1, %h1,
+h2, %h2,
+h3, %h3,
+h4, %h4,
+h5, %h5,
+h6, %h6 {
+  color: $color-headings;
+  font-family: $font-heading;
+  font-weight: $weight-heading;
+}
+
+h1, %h1,
+h2, %h2,
+h3, %h3 {
+
+  @if $opentype == true {
+    // Turn on discretionary ligatures for larger headings.
+    font-feature-settings: "kern" 1, "liga" 1, "pnum" 1, "tnum" 0, "onum" 1, "lnum" 0, "dlig" 1;
+  }
+}
+
+/*
+* Size increments are set according to our chosen modular scale.
+* Increments for h4 and h5 are zeroed out (1em) at smaller sizes
+* to maintain legibility.
+*/
+h1, %h1 {
+  @include font-size($scale-up3, 8);
+
+  @include mq($min, $lg) {
+  //  @include font-size($scale-up4, 0);
+  }
+}
+
+h2, %h2 {
+  @include font-size($scale-up2, 8);
+
+  @include mq($min, $lg) {
+  //  @include font-size($scale-up3, 8);
+  }
+}
+
+h3, %h3 {
+  @include font-size($scale-up1, 8);
+
+  @include mq($min, $lg) {
+  //  @include font-size($scale-up2, 8);
+  }
+}
+
+h4, %h4 {
+  @include font-size($root-size-em, 8);
+
+  @include mq($min, $lg) {
+  //  @include font-size($scale-up1, 8);
+  }
+}
+
+h5, %h5 {
+  @include font-size($root-size-em, 8);
+}
+
+h6, %h6 {
+  @include font-size($root-size-em, 4);
+}

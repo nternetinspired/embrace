@@ -1,0 +1,112 @@
+
+/* ==========================================================================
+    BUTTON STYLES
+   ========================================================================== */
+/*
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element.
+*/
+
+.btn {
+  @include box-shadow(0 2px 5px 0 rgba(0, 0, 0, .03), 0 2px 10px 0 rgba(0, 0, 0, .03), inset 0 0 0 1px rgba(0, 0, 0, .2));
+  @include font-size($root-size-em, 0, auto);
+  @include font-smoothing();
+  @include transition(all .4s);
+  background: $color-background;
+  border-radius: $radius-button;
+  color: rgba(0, 0, 0, .7);
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-button;
+  font-weight: $weight-button;
+  padding: spacer(2) spacer(4);
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+
+  &:hover {
+    @include box-shadow(0 5px 10px 0 rgba(0, 0, 0, .1), 0 4px 15px 0 rgba(0, 0, 0, .075), inset 0 0 0 1px rgba(0, 0, 0, .2));
+  }
+}
+
+.btn--link {
+  background: transparent;
+  box-shadow: none;
+  opacity: .5;
+
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+/* BUTTON COLOURS */
+.btn--danger {
+  background: $color-danger;
+
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($color-danger, 15%);
+  }
+}
+
+.btn--info {
+  background: $color-info;
+
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($color-info, 15%);
+  }
+}
+
+.btn--success {
+  background: $color-success;
+
+  &.active,
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($color-success, 15%);
+  }
+}
+
+.btn--warning {
+  background: $color-warning;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background: lighten($color-warning, 15%);
+  }
+}
+
+/* BUTTON SIZING */
+.btn--sm {
+  @include font-size($scale-down1, 0, auto);
+  padding: spacer(0, $scale-down1) spacer(2, $scale-down1);
+}
+
+.btn--lg {
+  @include font-size($scale-up1, 0, auto);
+  padding: spacer(4, $scale-up1) spacer(8, $scale-up1);
+}
+
+/* FULL-WIDTH BUTTONS */
+.btn--natural {
+  width: 100%;
+}

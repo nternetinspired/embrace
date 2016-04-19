@@ -1,0 +1,77 @@
+
+/* ==========================================================================
+    FORMS
+   ========================================================================== */
+
+/* Standardise font rendering */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+fieldset {
+
+}
+
+label {
+  display: block;
+//  margin: spacer(4);
+  max-width: 100%;
+}
+
+legend {
+
+}
+
+progress,
+meter {
+  display: block;
+  width: 100%;
+  height: spacer(4);
+}
+
+input,
+textarea {
+  display: block;
+}
+
+select {
+  height: spacer(8);
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+  height: auto;
+  resize: vertical;
+  -webkit-appearance: none;
+}
+
+/* De-bork search fields */
+[type="search"] {
+  -webkit-appearance: textfield;
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+[type="radio"],
+[type="checkbox"] {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+/* Make range inputs behave like textual form controls. */
+[type="range"] {
+  display: block;
+  width: 100%;
+}
+
+/* Fix cursor style of increment and decrement buttons in Chrome. */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}

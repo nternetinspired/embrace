@@ -1,0 +1,24 @@
+
+/* ==========================================================================
+    TYPOGRAPHY
+   ========================================================================== */
+
+/* Awesome ampersands */
+.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+
+.caps {
+  @extend %abbr;
+}
+
+/* Typically used in the first paragraph of an article, for added awesome. */
+.lede,
+%lede {
+  @include font-size($scale-up1, 4, inherit);
+}
+
+.small {
+  @extend %small;
+}

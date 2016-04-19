@@ -1,0 +1,24 @@
+
+/* ==========================================================================
+    TABLES
+   ========================================================================== */
+
+.table--split {
+  td {
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+}
+
+.table--striped {
+  tr {
+    &:nth-of-type(odd) {
+      background-color: $color-background;
+    }
+
+    + tr {
+      border-top: 1px solid $color-border;
+    }
+  }
+}
