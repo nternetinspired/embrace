@@ -51,11 +51,9 @@ html {
     box-sizing: inherit;
   }
 
+  // The Lobotomised Owl selector from @heydonworks, as described in:
+  // http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
   + * {
-
-    &:not(li) {
-      // Set the default vertical rhythym on all elements
-      margin-top: spacer();
-    }
+    margin-top: spacer();
   }
 }
