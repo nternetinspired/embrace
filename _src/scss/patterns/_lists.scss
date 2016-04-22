@@ -5,9 +5,7 @@
 
 .list--inline,
 %list--inline {
-
   @extend %list--unstyled;
-
   margin-left: -.75em;
   margin-right: -.75em;
 
@@ -19,15 +17,19 @@
 
 .list--styled {
   @extend %list--unstyled;
+  max-width: $width-copy;
 
   li {
-
-    margin: spacer(2) 0;
 
     &:before {
       content: '\002714';
       color: $color-success;
-      margin-right: 1em;
+      margin: 0 spacer(2) 0 0;
+
+      @include mq($min, $md) {
+        margin: 0 0 0 spacer(-4);
+        position: absolute;
+      }
     }
   }
 }
@@ -36,8 +38,7 @@
   @extend %list--unstyled;
 
   li {
-    margin: 0;
-    padding: spacer(2) 0;
+    padding: 0 0 spacer(2);
 
     &:not(:last-child) {
       @include box-shadow(0 1px 0 0 $color-border, null);

@@ -9,4 +9,9 @@
   max-width: $width-container;
   padding-left: spacer();
   padding-right: spacer();
+
+  @include mq($min, $md) {
+    padding-left: spacer(6);
+    padding-right: spacer(6);
+  }
 }
