@@ -7,8 +7,11 @@
 
 }
 
-.article-content {
+.article-body {
 
+  > p:first-of-type {
+    @extend %lede;
+  }
 }
 
 .article-intro {
