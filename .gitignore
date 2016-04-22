@@ -20,10 +20,6 @@ css/
 js/
 img/
 
-# Ignore placeholder content
-_src/img
-_src/js
-
 # Ignore documentation
 elements.md
 index.md
