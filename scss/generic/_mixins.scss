@@ -184,8 +184,8 @@ $max: max-width;
 
   // If you don't pass a lineheight param, auto-calculate it.
   @if $lineheight == auto {
-    $lineheight: ceil($font-size / $root-lineheight) * ($root-lineheight / $font-size);
-    line-height: $lineheight;
+    $lineheight-auto: ceil($font-size / $root-lineheight) * ($root-lineheight / $font-size);
+    line-height: $lineheight-auto;
   }
 
   // If you pass an integer, or valid line-height setting we'll use that instead.
