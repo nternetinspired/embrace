@@ -98,7 +98,7 @@
 }
 
 // Basic vertical gradients.
-@mixin vertical($start-color: $color-root-background, $end-color: darken($color-root-background, 10%)) {
+@mixin vertical($start-color: $color-background-root, $end-color: darken($color-background-root, 10%)) {
   background-color: $end-color;
   background-image: linear-gradient($start-color, $end-color);
   background-repeat: repeat-x;

@@ -6,7 +6,7 @@
 .card {
   @include border();
   @include box-shadow();
-  background: $color-root-background;
+  background: $color-background-root;
 
   &-content {
     @extend %margin-off;
