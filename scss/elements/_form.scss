@@ -15,9 +15,13 @@ fieldset {
 
 }
 
+form {
+
+}
+
 label {
   display: block;
-//  margin: spacer(4);
+  margin: 0 auto spacer(1);
   max-width: 100%;
 }
 
@@ -38,8 +42,9 @@ textarea {
 }
 
 select {
-  height: spacer(8);
+  -webkit-appearance: textfield;
 }
+
 
 /* Allow only vertical resizing of textareas. */
 textarea {
