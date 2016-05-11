@@ -25,11 +25,13 @@
 ============================================================================= */
 @import 'generic/functions';
 @import 'generic/mixins';
-
 @import 'generic/reset'; // Resets some things. Naturally.
+
+@import 'generic/aspect-ratio';
 @import 'generic/fluid-type';
 @import 'generic/helpers';
 @import 'generic/modular-scale';
+@import 'generic/widths';
 
 
 /* =============================================================================
@@ -56,9 +58,8 @@
   UTILITIES
   One-trick ponies, these are single-purpose utlility classes designed to
   trump any conflicting style applied to an element. Partials are named after
-  the CSS property they target. 
+  the CSS property they target.
 ============================================================================= */
-//@import 'utilities/aspect-ratio';
 @import 'utilities/background-color';
 @import 'utilities/border';
 @import 'utilities/color';
