@@ -3,32 +3,34 @@
 	FLEX GRID
    ========================================================================== */
 
-.grid {
-  display: flex;
-  flex-flow: row wrap;
+ .grid {
+   display: flex;
+   flex-flow: row wrap;
 
-  &-item {
-    @extend %margin-off;
-    flex: 0 1 auto;
-  }
+   &-item {
+     @extend %margin-off;
+     flex: 0 1 auto;
+   }
 
-  &--grow {
-    .grid-item {
-      flex: 1 1 auto;
-    }
-  }
+   &--grow {
+     .grid-item {
+       flex: 1 1 auto;
+     }
+   }
 
-  &--middle {
-    align-items: center;
-  }
+   &--bottom {
+     align-items: flex-end;
+   }
 
-  &--padded {
+   &--middle {
+     align-items: center;
+   }
 
-    margin-left: spacer(-4);
+   &--padded {
+     margin: 0 0 0 spacer(-4);
 
-    > .grid-item {
-      margin-top: spacer();
-      padding-left: spacer(4);
-    }
-  }
-}
+     > .grid-item {
+       padding: spacer(4) 0 0 spacer(4);
+     }
+   }
+ }
