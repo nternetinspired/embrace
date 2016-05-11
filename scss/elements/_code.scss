@@ -20,8 +20,8 @@ pre {
   @include box-shadow(0 0 0 1px $color-border inset, null);
   background-color: $color-background-pre;
   border-radius: $radius-brand;
-  font: inherit;
-  max-width: $width-copy;
+  display: inline-block;
+  font-family: inherit;
   overflow: scroll;
   padding: spacer(4);
 }
