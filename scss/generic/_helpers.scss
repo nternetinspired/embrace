@@ -49,16 +49,3 @@
   @extend %muted;
   pointer-events: none;
 }
-
-/* Align text */
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-reversed {
-  color: $color-background;
-}
