@@ -131,9 +131,9 @@
   applied via page class selectors, e.g. .blog {…}. If you don't need these you
   have a very modular design.
 ============================================================================= */
-@import 'layouts/category';
-@import 'layouts/homepage';
-@import 'layouts/page';
+@import 'views/category';
+@import 'views/homepage';
+@import 'views/post';
 
 
 /* =============================================================================
