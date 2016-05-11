@@ -1,13 +1,10 @@
-
 /* ==========================================================================
     TYPOGRAPHY $TODO - Break this file up.
    ========================================================================== */
-
 /* PARAGRAPHS */
 p {
   orphans: 3;
   widows: 3;
-  max-width: $width-copy;
   word-wrap: break-word;
 
   @if $paragraph-indent {
