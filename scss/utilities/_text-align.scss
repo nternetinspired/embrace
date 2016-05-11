@@ -1,0 +1,29 @@
+
+/* ==========================================================================
+    TEXT ALIGNMENT CONTROL STYLES
+   ========================================================================== */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: right;
+}
+
+@include mq($min, $md) {
+  .md-text-left {
+    text-align: right;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+@include mq($min, $md) {
+  .md-text-right {
+    text-align: right;
+  }
+}

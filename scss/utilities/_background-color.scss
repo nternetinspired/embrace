@@ -1,0 +1,26 @@
+
+/* ==========================================================================
+    BACKGROUND COLOR
+    // scss-lint:disable ImportantRule
+   ========================================================================== */
+
+/* Our brand palette colours */
+.background-color--primary {
+  background-color: $color-primary !important;
+}
+
+.background-color--secondary {
+  background-color: $color-secondary !important;
+}
+
+.background-color {
+  background-color: $color-background;
+}
+
+.background-color--alt {
+  background-color: $color-background-alt;
+}
+
+.background-color--root {
+  background-color: $color-background-root;
+}

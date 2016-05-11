@@ -55,15 +55,19 @@
 /* =============================================================================
   UTILITIES
   One-trick ponies, these are single-purpose utlility classes designed to
-  trump any conflicting style applied to an element.
+  trump any conflicting style applied to an element. Partials are named after
+  the CSS property they target. 
 ============================================================================= */
-@import 'utilities/align';
-@import 'utilities/aspect-ratio';
+//@import 'utilities/aspect-ratio';
+@import 'utilities/background-color';
 @import 'utilities/border';
+@import 'utilities/color';
 @import 'utilities/float';
 @import 'utilities/margin';
-@import 'utilities/weight';
-@import 'utilities/width';
+@import 'utilities/padding';
+@import 'utilities/text-align';
+@import 'utilities/text-transform';
+@import 'utilities/font-weight';
 
 
 /* =============================================================================

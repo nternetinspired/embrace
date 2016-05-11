@@ -1,32 +1,24 @@
 
 /* =============================================================================
-    MARGIN TRUMPS
+    PADDING TRUMPS
     // scss-lint:disable ImportantRule
 ============================================================================= */
 
-.margin-auto {
-  margin: spacer(4) auto 0;
+%padding-off {
+  padding: 0 !important;
 }
 
-%margin-off {
-  margin-top: 0 !important;
+.padding-off {
+  @extend %padding-off;
 }
 
-.margin-off {
-  @extend %margin-off;
-}
-
-%margins-off {
+%padding-off-all {
   &,
   > * {
-    margin-top: 0 !important;
+    padding: 0 !important;
   }
 }
 
-.margins-off {
+.padding-off-all {
   @extend %margins-off;
-}
-
-.margin-top--sm {
-  margin-top: spacer(2);
 }
